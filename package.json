@@ -1,0 +1,21 @@
+{
+  "name": "kopeiky.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/kopeiky.js",
+  "module": "dist/kopeiky.es.js",
+  "scripts": {
+    "start": "parcel index.html --open",
+    "build": "rollup -c --environment INCLUDE_DEPS,BUILD:production",
+    "test": "jest"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@babel/core": "7.2.0",
+    "jest": "^26.1.0",
+    "parcel-bundler": "^1.6.1",
+    "rollup": "^2.22.1",
+    "rollup-plugin-terser": "^6.1.0"
+  },
+  "keywords": []
+}
