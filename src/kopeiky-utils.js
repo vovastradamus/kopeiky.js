@@ -16,8 +16,8 @@ export function prepareOperationNumber(ctx, num) {
 
   let numKopeiky = num;
 
-  if (num instanceof Kopeiky && ctx._decimal !== num._decimal) {
-    throw new TypeError("Incoming decimal Kopeiky not equals");
+  if (num instanceof Kopeiky && ctx._rank !== num._rank) {
+    throw new TypeError("Incoming rank Kopeiky not equals");
   }
 
   if (typeof num === "number") {

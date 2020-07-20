@@ -2,11 +2,11 @@ import { prepareOperationNumber, validateKopeiky } from "./kopeiky-utils";
 
 export class Kopeiky {
   constructor(num, options = {}) {
-    const { decimal = 2 } = options;
+    const { rank = 2 } = options;
 
     this._options = options;
-    this._decimal = decimal;
-    this._num = parseInt(num * 10 ** this._decimal, 10);
+    this._rank = rank;
+    this._num = parseInt(num * 10 ** this._rank, 10);
   }
 
   getValue() {
@@ -16,7 +16,7 @@ export class Kopeiky {
   toNormal(num) {
     const returnNum = num === undefined ? this._num : num;
 
-    return returnNum / 10 ** this._decimal;
+    return returnNum / 10 ** this._rank;
   }
 
   add(num) {
@@ -48,7 +48,7 @@ export class Kopeiky {
   }
 
   toString() {
-    return this.toNormal().toFixed(this._decimal);
+    return this.toNormal().toFixed(this._rank);
   }
 
   valueOf() {
