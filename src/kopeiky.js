@@ -54,6 +54,10 @@ export class Kopeiky {
   valueOf() {
     return this.toNormal();
   }
+
+  toJSON() {
+    return this.toNormal();
+  }
 }
 
 export function createKopeiky(num, options) {

@@ -33,4 +33,10 @@ test("test kopeiky", () => {
   expect(kopeiky(4.2, { rank: 0 }).toString()).toBe("4");
 
   expect(() => kopeiky(20).add(kopeiky(20, { rank: 3 }))).toThrow();
+
+  expect(
+    JSON.parse(JSON.stringify({ a: kopeiky(0.2001).add(0.01) }))
+  ).toMatchObject({
+    a: 0.21,
+  });
 });

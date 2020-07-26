@@ -14,7 +14,8 @@ This library can help with that
 ```javascript
 import kopeiky from "./index";
 
-kopeiky(0.2).add(0.01).toNormal();
+kopeiky(0.2).add(0.01).toNormal(); // 0.21
+JSON.stringify({ money: kopeiky(0.2).add(0.01) }); // "{money: 0.21}"
 ```
 
 Some trick:
@@ -33,10 +34,11 @@ Some trick:
 ## Instance Methods:
 
 **add(number|kopeiky): Kopeiky** - add to current kopeiky  
-**sub(number|kopeiky): Kopeiky** subtract to current kopeiky  
+**sub(number|kopeiky): Kopeiky** subtract from current kopeiky  
 **muliply(number): Kopeiky** - muliply kopeiky  
 **divide(number): Kopeiky** - divide kopeiky  
 **clone(): Kopeiky** - return new instance of Kopeiky  
 **valueOf(): number** - return primitive number  
 **toNormal(): number** - return primitive number  
 **toString(): string** - return a number using fixed-point notation
+**toString(): string** - for normalize on json.stringify
